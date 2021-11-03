@@ -17,6 +17,7 @@
 
 #### Android specific
 
+- Re-introduce AsyncEventBeatV2 experiment ([6d367d70f2](https://github.com/facebook/react-native/commit/6d367d70f2c5b44cbefa875308fd0d1b78a2ba88) by [@sammy-SC](https://github.com/sammy-SC))
 - Added an experimental touch dispatch path ([a2feaeb5f1](https://github.com/facebook/react-native/commit/a2feaeb5f1121a860a9416b5d4e0e96debd45b09) by [@ShikaSD](https://github.com/ShikaSD))
 - Add ACCESS_MEDIA_LOCATION permission to PermisionsAndroid library. ([79db483568](https://github.com/facebook/react-native/commit/79db4835681f5d0149620ec8e0990411cb882241) by [@Skrilltrax](https://github.com/Skrilltrax))
 - Implement SnapToAlignment in ReactScrollView ([e774c037bc](https://github.com/facebook/react-native/commit/e774c037bce40a4b48e78d2d0a1085a1e4f5a328) by [@mdvacca](https://github.com/mdvacca))
@@ -33,9 +34,11 @@
 - Add asdf-vm support in find-node.sh ([3e7c310b1d](https://github.com/facebook/react-native/commit/3e7c310b1dcf5643920535eea70afa451888792a) by [@pastleo](https://github.com/pastleo))
 - ScrollView: Respect `contentInset` when animating new items with `autoscrollToTopThreshold`, make `automaticallyAdjustKeyboardInsets` work with `autoscrollToTopThreshold` (includes vertical, vertical-inverted, horizontal and horizontal-inverted ScrollViews) ([6e903b07fa](https://github.com/facebook/react-native/commit/6e903b07fa8e8d9b78cae0e031bb8022f7a63195) by [@mrousavy](https://github.com/mrousavy))
 - Introduce MockSurfaceHandler ([ec92c85a15](https://github.com/facebook/react-native/commit/ec92c85a15468fd00dc0a23b8f69f5f1624f7b45) by [@philIip](https://github.com/philIip))
+- Add UIAccessibilityTraitUpdatesFrequently to progressBar role ([1a42bd6e97](https://github.com/facebook/react-native/commit/1a42bd6e97ae44a3b38ca552865bac63a6f35da5) by [@jimmy623](https://github.com/jimmy623))
 
 ### Changed
 
+- Move react-native-codegen dependency to react-native root package.json ([b494ae0703](https://github.com/facebook/react-native/commit/b494ae0703c4e29cbab8354f3a73076986167b20) by [@hramos](https://github.com/hramos))
 - React Native sync for revisions e8feb11...afcb9cd ([c75ad2cdb1](https://github.com/facebook/react-native/commit/c75ad2cdb1b553af47dafb5840137d845b38be0b) by [@ShikaSD](https://github.com/ShikaSD))
 - Remove shared responsibility between LogBox and ExceptionsManager native module ([c901c43d11](https://github.com/facebook/react-native/commit/c901c43d11a243e7e4a9389f7e8f1440581ef7d9))
 - Update Modal's mock to not render its children when it is not visible ([ec614c16b3](https://github.com/facebook/react-native/commit/ec614c16b331bf3f793fda5780fa273d181a8492) by [@AntoineDoubovetzky](https://github.com/AntoineDoubovetzky))
@@ -67,6 +70,7 @@
 
 #### iOS specific
 
+- Setup a new macro to gate the core packager functionality ([a8cd8f7696](https://github.com/facebook/react-native/commit/a8cd8f769695621e4624a14d1da7f355c4544cbe) by [@jimmy623](https://github.com/jimmy623))
 - Fixed inaccurate comment ([c744528da1](https://github.com/facebook/react-native/commit/c744528da1d6094f73b087d0ef90e33a9fa105ed) by [@philIip](https://github.com/philIip))
 - Remove iOS 11 version check ([398595e074](https://github.com/facebook/react-native/commit/398595e07483fa8f45579de4ca1aee9585e20620) by [@ken0nek](https://github.com/ken0nek))
 - Optimized font handling ([4ac42d88ef](https://github.com/facebook/react-native/commit/4ac42d88ef60ae3fed7319851d47b93e98ac9afa) by [@Adlai-Holler](https://github.com/Adlai-Holler))
@@ -96,6 +100,7 @@
 - Summary: Changelog: [General][fixed] Support Animated.ValueXY when validating Animated.event ([27dd2ecb70](https://github.com/facebook/react-native/commit/27dd2ecb70f1d08787c93a2e18250ffaff328e5f) by [@javache](https://github.com/javache))
 - Add a function `getIgnorePatterns` in `LogBoxData.js` for tests or other usecases. ([a950634424](https://github.com/facebook/react-native/commit/a950634424cddf31c0adb6c9799adf1cc5f83bf0))
 - Copy repo-config dependencies for bumping release version ([963254e2ec](https://github.com/facebook/react-native/commit/963254e2ec31fd5897d46e51862feba5d65a7e5b) by [@lunaleaps](https://github.com/lunaleaps))
+- Fix "Running on device" in RNTester README ([21b2d6c8e7](https://github.com/facebook/react-native/commit/21b2d6c8e7e137ae161a4f7ceee2f7d9888fb501) by [@osdnk](https://github.com/osdnk))
 
 #### Android specific
 
@@ -122,6 +127,8 @@
 #### iOS specific
 
 - IOS Ruby Updates ([1e6add1a43](https://github.com/facebook/react-native/commit/1e6add1a43355bb88c57400a7420a656966bef97) by [@barbieri](https://github.com/barbieri))
+- Switch order of search libraries to fix M1 build error ([329b026f3a](https://github.com/facebook/react-native/commit/329b026f3a48a4228a89696540ba459276f9a2c2) by [@sammy-SC](https://github.com/sammy-SC))
+- Include Swift lib in LIBRARY_SEARCH_PATHS ([ad9030ca9a](https://github.com/facebook/react-native/commit/ad9030ca9ae3861d079c16d3ce610edc1bedc54c) by [@lunaleaps](https://github.com/lunaleaps))
 - Fixed an edge case when scroll to item/index is called without animation, the offset position is not updated. This caused the measurement of the position to be wrong. ([55392f65a6](https://github.com/facebook/react-native/commit/55392f65a6addbdd8214b61d4ae286f26d63a94f) by [@ryancat](https://github.com/ryancat))
 - Fixed the issue when moving cursor in multi-line TextInput. ([22801870f0](https://github.com/facebook/react-native/commit/22801870f0613c2544ade1ebc5363e6e2f015c79) by [@xiankuncheng](https://github.com/xiankuncheng))
 - Warn if Rosetta2 is being used (x86_64 on arm64) ([51bf557948](https://github.com/facebook/react-native/commit/51bf55794899284e1c465d346a3f6ebd8a485da2) by [@barbieri](https://github.com/barbieri))
@@ -152,15 +159,6 @@
 #### iOS Unknown
 
 #### Failed to parse
-
-- Re-introduce AsyncEventBeatV2 experiment ([6d367d70f2](https://github.com/facebook/react-native/commit/6d367d70f2c5b44cbefa875308fd0d1b78a2ba88) by [@sammy-SC](https://github.com/sammy-SC))
-- Move react-native-codegen dependency to react-native root package.json ([b494ae0703](https://github.com/facebook/react-native/commit/b494ae0703c4e29cbab8354f3a73076986167b20) by [@hramos](https://github.com/hramos))
-- Setup a new macro to gate the core packager functionality ([a8cd8f7696](https://github.com/facebook/react-native/commit/a8cd8f769695621e4624a14d1da7f355c4544cbe) by [@jimmy623](https://github.com/jimmy623))
-- Remove movesToAnimate var which was never read ([1e4f364f87](https://github.com/facebook/react-native/commit/1e4f364f873fdeb98e394899fa17079a4404eaaa) by [@sammy-SC](https://github.com/sammy-SC))
-- Fix "Running on device" in RNTester README ([21b2d6c8e7](https://github.com/facebook/react-native/commit/21b2d6c8e7e137ae161a4f7ceee2f7d9888fb501) by [@osdnk](https://github.com/osdnk))
-- Switch order of search libraries to fix M1 build error ([329b026f3a](https://github.com/facebook/react-native/commit/329b026f3a48a4228a89696540ba459276f9a2c2) by [@sammy-SC](https://github.com/sammy-SC))
-- Include Swift lib in LIBRARY_SEARCH_PATHS ([ad9030ca9a](https://github.com/facebook/react-native/commit/ad9030ca9ae3861d079c16d3ce610edc1bedc54c) by [@lunaleaps](https://github.com/lunaleaps))
-- Add UIAccessibilityTraitUpdatesFrequently to progressBar role ([1a42bd6e97](https://github.com/facebook/react-native/commit/1a42bd6e97ae44a3b38ca552865bac63a6f35da5) by [@jimmy623](https://github.com/jimmy623))
 
 ## v0.66.1
 
