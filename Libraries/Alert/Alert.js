@@ -124,7 +124,8 @@ class Alert {
             cancelButtonKey = String(index);
           } else if (btn.style === 'destructive') {
             destructiveButtonKey = String(index);
-          } else if (btn.isPreferred) {
+          }
+          if (btn.isPreferred) {
             preferredButtonKey = String(index);
           }
           if (btn.text || index < (callbackOrButtons || []).length - 1) {
